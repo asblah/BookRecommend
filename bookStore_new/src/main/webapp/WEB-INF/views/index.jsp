@@ -166,11 +166,11 @@
                         <c:set var="cc" value="${c.id}" scope="session"></c:set>
                         <%
                             Integer category_id= (Integer) pageContext.findAttribute("cc");
-                            String URL="jdbc:mysql://127.0.0.1:3306/bookstorm?useUnicode=true&amp;characterEncoding=utf-8";
+                            String URL="jdbc:mysql://localhost:3306/bookstorm?useUnicode=true&characterEncoding=utf8&&serverTimezone=Asia/Shanghai";
                             String USER="root";
-                            String PASSWORD="root";
+                            String PASSWORD="yzq991023";
                             //1.加载驱动程序
-                            Class.forName("com.mysql.jdbc.Driver");
+                            Class.forName("com.mysql.cj.jdbc.Driver");
                             //2.获得数据库链接
                             Connection conn=DriverManager.getConnection(URL, USER, PASSWORD);
                             //3.通过数据库的连接操作数据库，实现增删改查（使用Statement类）
@@ -196,7 +196,7 @@
                                             <div class="clear"></div>
                                         </a>
                                     </div>
-                                    <div class="xuangou_right fr"><a href="/category_detail?category_id=<%=rs.getInt("id")%>&i=0">查看</a></div>
+                                    <div class="xuangou_right fr"><a href="/category_detail?category_id=<%=rs.getInt("id")%>&i=0&limit=0">查看</a></div>
                                     <div class="clear"></div>
                                 </div>
                                 <%

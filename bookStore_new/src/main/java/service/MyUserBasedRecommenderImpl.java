@@ -44,7 +44,7 @@ public class MyUserBasedRecommenderImpl implements MyUserBasedRecommender1 {
 			dataSource.setDatabaseName("bookstorm");//数据库名
 			DataModel dataModel=new MySQLJDBCDataModel(dataSource,"score_book","user_id","book_id","score","time");
 
-*/         File  modelFile = new File("C:\\Users\\lenovo\\Desktop\\my love\\bookStore_new\\ratings1.csv");
+*/         File  modelFile = new File("E:\\CurriculumDesign\\ratings1.csv");
 			//System.out.println(modelFile);
 			DataModel model = new FileDataModel(modelFile);//构造数据模型
 

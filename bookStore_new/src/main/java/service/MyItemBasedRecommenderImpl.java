@@ -1,5 +1,5 @@
 package service;
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
 import com.thoughtworks.xstream.mapper.Mapper;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
@@ -26,7 +26,8 @@ public class MyItemBasedRecommenderImpl implements MyItemBasedRecommender{
 	public List<RecommendedItem> myItemBasedRecommender(long userID, int size){
 		List<RecommendedItem> recommendations = null;
 		try {
-			File  modelFile = new File("C:\\Users\\lenovo\\Desktop\\my love\\bookStore_new\\ratings1.csv");
+			File  modelFile = new File("E:\\CurriculumDesign\\ratings1.csv");
+
 			//System.out.println(modelFile);
 			/*Class.forName("com.mysql.jdbc.Driver");
 			MysqlDataSource dataSource = new MysqlDataSource();
@@ -51,7 +52,7 @@ public class MyItemBasedRecommenderImpl implements MyItemBasedRecommender{
 	public long[] myItem(long ItemID) throws TasteException, IOException {
 
 		List<RecommendedItem> recommendations = null;
-		File  modelFile = new File("C:\\Users\\lenovo\\Desktop\\my love\\bookStore_new\\ratings1.csv");
+		File  modelFile = new File("E:\\CurriculumDesign\\ratings1.csv");
 		//System.out.println(modelFile);
 		DataModel model = new FileDataModel(modelFile);//构造数据模型
 		/*try {

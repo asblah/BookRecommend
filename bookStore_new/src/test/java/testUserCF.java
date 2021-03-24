@@ -1,5 +1,5 @@
 import com.csvreader.CsvWriter;
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.eval.IRStatistics;
 import org.apache.mahout.cf.taste.eval.RecommenderBuilder;

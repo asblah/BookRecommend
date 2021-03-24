@@ -71,8 +71,7 @@ public class CoreController {
 			System.out.println(user.getName());
 			MyUserBasedRecommenderImpl muser=new MyUserBasedRecommenderImpl();
 			List<RecommendedItem> listU=muser.userBasedRecommender(user.getId(),5);
-			//List<RecommendedItem> listI=myItemBasedRecommender.myItemBasedRecommender(user.getId(),5);
-			//System.out.println("wowoowowoowowowowo我我哦我我哦我我问"+listI.size()+"   "+listU.size());
+
 			if(listU.equals(null)){
 				List<BookNew> listByU = null;
 				//List<BookNew> listByI = null;
@@ -86,9 +85,6 @@ public class CoreController {
 				model.addAttribute("listByU",listByU);
 				//model.addAttribute("listByI",listByI);
 			}
-
-
-
 
 		}
 
@@ -108,7 +104,7 @@ public class CoreController {
 			 for(CategoryClass category_Class:array)
 			 {
 			 	System.out.println(category_Class.getCategoryClassname());
-			 	System.out.println("home+++++++++++===========================================================kkkoookkoo0000000");
+			 	//System.out.println("home+++++++++++===========================================================kkkoookkoo0000000");
 			 }
 		}
 		model.addAttribute("categories", categories);
